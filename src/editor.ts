@@ -1,5 +1,5 @@
 import { EditorState, Extension } from '@codemirror/state';
-import { EditorView, keymap, highlightActiveLine, lineNumbers, drawSelection, crosshairCursor } from '@codemirror/view';
+import { EditorView, keymap, highlightActiveLine, lineNumbers, drawSelection } from '@codemirror/view';
 import { python } from '@codemirror/lang-python';
 import { defaultKeymap, history, historyKeymap, indentWithTab } from '@codemirror/commands';
 import { syntaxHighlighting, HighlightStyle } from '@codemirror/language';
@@ -15,7 +15,8 @@ const botanicalHighlightStyle = HighlightStyle.define([
   { tag: t.className, color: 'var(--blue)', fontWeight: 'bold' },
   { tag: t.operator, color: 'var(--red)' },
   { tag: t.punctuation, color: 'var(--ink-light)' },
-  { tag: t.standard(t.name), color: 'var(--sage)', fontWeight: '500' },
+  { tag: t.standard(t.name), color: 'var(--sage)', fontWeight: 'bold' },
+  { tag: t.function(t.variableName), color: 'var(--blue)', fontWeight: 'bold' },
   { tag: t.variableName, color: 'var(--ink)' },
 ]);
 
@@ -79,7 +80,6 @@ export class CodeStudioEditor {
       history(),
       highlightActiveLine(),
       drawSelection(),
-      crosshairCursor(),
       python(),
       botanicalTheme,
       syntaxHighlighting(botanicalHighlightStyle),
