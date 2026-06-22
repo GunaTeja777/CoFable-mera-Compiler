@@ -42,7 +42,7 @@ export function buildAppLayout(container: HTMLElement) {
       <div class="hdr-logo font-playfair text-[22px] font-bold tracking-[0.3px] whitespace-nowrap">Py<em class="text-amber not-italic font-normal">Fable</em></div>
       <div class="hdr-sub text-[11px] text-cream/40 italic whitespace-nowrap">— Python Studio · Fable 5 Edition</div>
     </div>
-    <div class="hdr-bg-butterflies absolute right-[180px] top-1/2 -translate-y-1/2 opacity-15 pointer-events-none z-1" aria-hidden="true">
+    <div class="hdr-bg-butterflies" aria-hidden="true">
       <svg width="220" height="34" viewBox="0 0 280 42">
         <ellipse cx="18" cy="16" rx="15" ry="9" fill="#2E7D6E" transform="rotate(-22,18,16)"/>
         <ellipse cx="11" cy="26" rx="9" ry="6" fill="#5A8A3C" transform="rotate(10,11,26)"/>
