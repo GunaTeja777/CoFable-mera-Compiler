@@ -1,4 +1,4 @@
-# 🦋 PyFable Studio — Fable 5 Edition
+# 🦋 PyFable Studio — Fable 5 Inspiration
 
 PyFable is a premium, lightweight, responsive, and completely browser-based Python IDE. Built using the modern WebAssembly runtime (**Pyodide**), **CodeMirror 6**, **TypeScript**, and **Tailwind CSS v4**, it allows developers to run Python code with zero installations, local imports support via a Virtual File System, and interactive package installations from PyPI.
 
