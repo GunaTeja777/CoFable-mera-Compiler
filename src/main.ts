@@ -35,6 +35,7 @@ let activeFile: VirtualFile = fs.getFiles()[0] || { name: 'main.py', content: ''
 let editor: CodeStudioEditor | null = null;
 let pyodide: any = null;
 let pyReady = false;
+let pyVersion = '';
 let packageManager: PackageManager | null = null;
 let runStartTime = 0;
 let isDirty = false;
@@ -74,6 +75,7 @@ function updateRuntimeStatus() {
     setStatus('ready', 'Java Ready');
   } else {
     if (pyReady) {
+      dom.pyver.textContent = pyVersion ? `Python ${pyVersion}` : 'Python';
       dom.btnRun.disabled = false;
       setStatus('ready', 'Ready');
     } else {
@@ -151,6 +153,7 @@ async function loadPyodideRuntime() {
     });
 
     const ver = pyodide.runPython('import sys; ".".join(map(str, sys.version_info[:3]))');
+    pyVersion = ver;
     
     // Only overwrite text if active file is Python
     const isJava = activeFile.name.endsWith('.java');
