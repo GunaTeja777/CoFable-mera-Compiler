@@ -960,3 +960,74 @@ html, body {
     display: flex !important;
   }
 }
+
+/* ── SPLIT RESIZER & TRANSITIONS ── */
+.panel-editor {
+  flex-shrink: 0;
+  min-width: 350px;
+}
+
+.panel-editor.transitioning {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-output {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 250px;
+}
+
+.panel-output.transitioning {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resizer {
+  width: 6px;
+  background-color: #3c3c3c;
+  cursor: col-resize;
+  position: relative;
+  transition: background-color 0.25s ease;
+  z-index: 50;
+  flex-shrink: 0;
+  display: block;
+}
+
+.resizer:hover {
+  background-color: #007ACC;
+}
+
+.resizer.dragging {
+  background-color: #0098FF;
+}
+
+/* Draggable Hit target Expansion */
+.resizer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 100;
+}
+
+/* Subtle grab indicator thumb */
+.resizer-thumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  pointer-events: none;
+  transition: background-color 0.2s ease;
+}
+
+.resizer:hover .resizer-thumb,
+.resizer.dragging .resizer-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+

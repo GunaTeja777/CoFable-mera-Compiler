@@ -222,7 +222,16 @@ export function buildAppLayout(container: HTMLElement) {
     </div>
     <div class="editor-container flex-1 min-h-0 overflow-hidden relative" id="editor-holder"></div>
   `;
-  mainLayout.appendChild(panelEditor);
+
+  // 5.2.5 Resizer / Splitter
+  const resizer = document.createElement('div');
+  resizer.id = 'layout-resizer';
+  resizer.className = 'resizer';
+  resizer.setAttribute('role', 'separator');
+  resizer.setAttribute('aria-orientation', 'vertical');
+  resizer.setAttribute('aria-label', 'Editor and Terminal split resizer');
+  resizer.setAttribute('tabindex', '0');
+  resizer.innerHTML = `<div class="resizer-thumb"></div>`;
 
   // 5.3 Terminal Output Panel
   const panelOutput = document.createElement('section');
@@ -235,11 +244,15 @@ export function buildAppLayout(container: HTMLElement) {
       <div class="output-actions ml-auto flex items-center gap-2.5">
         <button class="btn-text-action bg-transparent border-none text-ink-light cursor-pointer text-[11px] font-semibold transition-all hover:text-teal hover:underline" id="btn-copy-output" title="Copy output">Copy</button>
         <button class="btn-text-action bg-transparent border-none text-ink-light cursor-pointer text-[11px] font-semibold transition-all hover:text-teal hover:underline" id="btn-download-output" title="Download code files and output">Download</button>
+        <button class="btn-text-action bg-transparent border-none text-ink-light cursor-pointer text-[11px] font-semibold transition-all hover:text-teal hover:underline" id="btn-toggle-terminal" title="Toggle Terminal (Ctrl+&#96;)">Collapse</button>
         <span id="exec-badge" class="exec-badge text-[11px] font-mono font-bold px-1.5 py-0.5 rounded" style="display:none;"></span>
       </div>
     </div>
     <div class="output-body flex-1 bg-output-bg p-4 overflow-y-auto font-mono text-[13px] leading-[1.7] text-output-text min-h-0" id="output" role="log" aria-live="polite"></div>
   `;
+
+  mainLayout.appendChild(panelEditor);
+  mainLayout.appendChild(resizer);
   mainLayout.appendChild(panelOutput);
   container.appendChild(mainLayout);
 
@@ -292,6 +305,10 @@ export function buildAppLayout(container: HTMLElement) {
     execBadge: document.getElementById('exec-badge') as HTMLElement,
     btnCopyOutput: document.getElementById('btn-copy-output') as HTMLButtonElement,
     btnDownloadOutput: document.getElementById('btn-download-output') as HTMLButtonElement,
+    btnToggleTerminal: document.getElementById('btn-toggle-terminal') as HTMLButtonElement,
+    layoutResizer: resizer,
+    editorPanel: panelEditor,
+    outputPanel: panelOutput,
     mobileTabs: document.querySelectorAll('.mobile-tab'),
     appContainer: container,
     sdot: document.getElementById('sdot') as HTMLElement,
