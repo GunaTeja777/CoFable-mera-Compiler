@@ -3,7 +3,7 @@ export const EXAMPLES: Record<'python' | 'java', Record<string, string>> = {
     hello: `# ✦ Hello, World — a timeless beginning
 print("Hello, World!")
 print()
-print("Welcome to CoFable — Python Studio")
+print("Welcome to CoFable — PyJava Studio")
 print("Inspired by Fable 5 ✦")
 print()
 

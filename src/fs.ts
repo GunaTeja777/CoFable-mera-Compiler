@@ -8,7 +8,7 @@ const STORAGE_KEY = 'cofable_v2_files';
 const DEFAULT_FILES: VirtualFile[] = [
   {
     name: 'main.py',
-    content: `# ✦ Welcome to CoFable — Premium Python Studio ✦
+    content: `# ✦ Welcome to CoFable — Premium PyJava Studio ✦
 # Feel free to edit this code and run it!
 
 from utils import greeting, get_butterfly_art
@@ -52,7 +52,7 @@ public class Main {
 
 def greeting(name: str) -> str:
     """Returns a warm botanical greeting."""
-    return f"  Welcome to CoFable — Python Studio."
+    return f"  Welcome to CoFable — PyJava Studio."
 
 def get_butterfly_art() -> str:
     """Returns a simple ASCII butterfly."""

@@ -40,7 +40,7 @@ export function buildAppLayout(container: HTMLElement) {
         <circle cx="40" cy="12" r="3" fill="#E8DCBF"/>
       </svg>
       <div class="hdr-logo font-playfair text-[22px] font-bold tracking-[0.3px] whitespace-nowrap">Co<em class="text-amber not-italic font-normal">Fable</em></div>
-      <div class="hdr-sub text-[11px] text-cream/40 italic whitespace-nowrap">— Python Studio · Fable 5 Edition</div>
+      <div class="hdr-sub text-[11px] text-cream/40 italic whitespace-nowrap">— PyJava Studio · Fable 5 Edition</div>
     </div>
     <div class="hdr-bg-butterflies" aria-hidden="true">
       <svg width="220" height="34" viewBox="0 0 280 42">
