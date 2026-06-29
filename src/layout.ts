@@ -92,6 +92,9 @@ export function buildAppLayout(container: HTMLElement) {
       <button class="btn-sm btn-icon-text bg-cream border border-parchment-dark text-ink-mid px-3.5 py-1.5 rounded cursor-pointer text-xs font-semibold font-lato transition-all shadow-sm hover:bg-parchment-dark hover:text-ink flex items-center gap-1.5" id="btn-toggle-settings" title="Editor settings">
         ⚙️ Settings
       </button>
+      <button class="btn-sm btn-icon-text bg-cream border border-parchment-dark text-ink-mid px-3.5 py-1.5 rounded cursor-pointer text-xs font-semibold font-lato transition-all shadow-sm hover:bg-parchment-dark hover:text-ink flex items-center gap-1.5" id="btn-toolbar-toggle-terminal" title="Toggle Terminal (Ctrl+&#96;)">
+        💻 Terminal
+      </button>
       <div class="select-wrapper relative">
         <select class="font-lato text-xs font-semibold bg-cream border border-parchment-dark text-ink px-3 py-1.5 pr-7 rounded cursor-pointer outline-none appearance-none shadow-sm transition-all hover:bg-parchment-dark" id="example-sel">
           <option value="">— Examples —</option>
@@ -209,7 +212,7 @@ export function buildAppLayout(container: HTMLElement) {
   // 5.2 Code Editor Panel
   const panelEditor = document.createElement('section');
   panelEditor.id = 'editor-panel';
-  panelEditor.className = 'panel-editor flex-1 flex flex-col min-w-0 border-r-2 border-parchment-dark bg-cream';
+  panelEditor.className = 'panel-editor flex flex-col min-w-0 border-r-2 border-parchment-dark bg-cream';
   panelEditor.innerHTML = `
     <div class="panel-hdr bg-parchment-dark px-3.5 py-2 text-[10.5px] font-bold tracking-[1.2px] uppercase text-ink border-b border-parchment-dark shrink-0 flex items-center justify-between">
       <div class="dots-decorator flex gap-1.5 items-center mr-2">
@@ -236,7 +239,7 @@ export function buildAppLayout(container: HTMLElement) {
   // 5.3 Terminal Output Panel
   const panelOutput = document.createElement('section');
   panelOutput.id = 'output-panel';
-  panelOutput.className = 'panel-output flex-1 flex flex-col min-w-0';
+  panelOutput.className = 'panel-output flex flex-col min-w-0';
   panelOutput.innerHTML = `
     <div class="panel-hdr bg-parchment-dark px-3.5 py-2 text-[10.5px] font-bold tracking-[1.2px] uppercase text-ink border-b border-parchment-dark shrink-0 flex items-center justify-between">
       <span class="dot w-2 h-2 rounded-full inline-block bg-teal"></span>
@@ -306,6 +309,7 @@ export function buildAppLayout(container: HTMLElement) {
     btnCopyOutput: document.getElementById('btn-copy-output') as HTMLButtonElement,
     btnDownloadOutput: document.getElementById('btn-download-output') as HTMLButtonElement,
     btnToggleTerminal: document.getElementById('btn-toggle-terminal') as HTMLButtonElement,
+    btnToolbarToggleTerminal: document.getElementById('btn-toolbar-toggle-terminal') as HTMLButtonElement,
     layoutResizer: resizer,
     editorPanel: panelEditor,
     outputPanel: panelOutput,

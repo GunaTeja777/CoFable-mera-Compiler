@@ -9,6 +9,7 @@ export interface SplitterConfig {
   resizer: HTMLElement;
   mainLayout: HTMLElement;
   toggleBtn: HTMLButtonElement;
+  toolbarToggleBtn: HTMLButtonElement;
 }
 
 export class PanelSplitter {
@@ -17,6 +18,7 @@ export class PanelSplitter {
   private resizer: HTMLElement;
   private mainLayout: HTMLElement;
   private toggleBtn: HTMLButtonElement;
+  private toolbarToggleBtn: HTMLButtonElement;
 
   private isDragging = false;
   private isCollapsed = false;
@@ -29,6 +31,7 @@ export class PanelSplitter {
     this.resizer = config.resizer;
     this.mainLayout = config.mainLayout;
     this.toggleBtn = config.toggleBtn;
+    this.toolbarToggleBtn = config.toolbarToggleBtn;
 
     this.init();
   }
@@ -50,6 +53,7 @@ export class PanelSplitter {
     this.resizer.addEventListener('pointerdown', this.onPointerDown.bind(this));
     this.resizer.addEventListener('dblclick', this.onDoubleClick.bind(this));
     this.toggleBtn.addEventListener('click', this.toggleTerminal.bind(this));
+    this.toolbarToggleBtn.addEventListener('click', this.toggleTerminal.bind(this));
 
     // Keyboard shortcut (Ctrl + `)
     window.addEventListener('keydown', (e) => {
@@ -156,7 +160,11 @@ export class PanelSplitter {
     e.preventDefault();
 
     // Request pointer capture to receive events even outside the splitter boundaries
-    this.resizer.setPointerCapture(e.pointerId);
+    try {
+      this.resizer.setPointerCapture(e.pointerId);
+    } catch (err) {
+      // Ignore errors in environments that do not fully support pointer capture
+    }
 
     this.isDragging = true;
     this.resizer.classList.add('dragging');

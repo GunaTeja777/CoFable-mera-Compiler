@@ -25,7 +25,8 @@ new PanelSplitter({
   outputPanel: dom.outputPanel,
   resizer: dom.layoutResizer,
   mainLayout: dom.editorPanel.parentElement as HTMLElement,
-  toggleBtn: dom.btnToggleTerminal
+  toggleBtn: dom.btnToggleTerminal,
+  toolbarToggleBtn: dom.btnToolbarToggleTerminal
 });
 
 // ── STATE ──
