@@ -1,5 +1,5 @@
 /**
- * Package Manager for PyFable 
+ * Package Manager for CoFable 
  * Manages loading micropip and installing packages from PyPI.
  */
 

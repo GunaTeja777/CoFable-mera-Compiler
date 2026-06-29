@@ -3,12 +3,12 @@ export interface VirtualFile {
   content: string;
 }
 
-const STORAGE_KEY = 'pyfable_v2_files';
+const STORAGE_KEY = 'cofable_v2_files';
 
 const DEFAULT_FILES: VirtualFile[] = [
   {
     name: 'main.py',
-    content: `# ✦ Welcome to PyFable — Premium Python Studio ✦
+    content: `# ✦ Welcome to CoFable — Premium Python Studio ✦
 # Feel free to edit this code and run it!
 
 from utils import greeting, get_butterfly_art
@@ -25,7 +25,7 @@ print(get_butterfly_art())
   },
   {
     name: 'Main.java',
-    content: `// ✦ Welcome to PyFable — Java Edition ✦
+    content: `// ✦ Welcome to CoFable — Java Edition ✦
 // Feel free to edit this code and run it!
 
 import java.util.ArrayList;
@@ -48,11 +48,11 @@ public class Main {
   },
   {
     name: 'utils.py',
-    content: `# 🌿 Utility Functions for PyFable 
+    content: `# 🌿 Utility Functions for CoFable 
 
 def greeting(name: str) -> str:
     """Returns a warm botanical greeting."""
-    return f"  Welcome to PyFable — Python Studio."
+    return f"  Welcome to CoFable — Python Studio."
 
 def get_butterfly_art() -> str:
     """Returns a simple ASCII butterfly."""

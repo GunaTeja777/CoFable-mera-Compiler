@@ -3,7 +3,7 @@ export const EXAMPLES: Record<'python' | 'java', Record<string, string>> = {
     hello: `# ✦ Hello, World — a timeless beginning
 print("Hello, World!")
 print()
-print("Welcome to PyFable — Python Studio")
+print("Welcome to CoFable — Python Studio")
 print("Inspired by Fable 5 ✦")
 print()
 
@@ -171,7 +171,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
         System.out.println();
-        System.out.println("Welcome to PyFable — Java Studio");
+        System.out.println("Welcome to CoFable — Java Studio");
         System.out.println("Inspired by Fable 5 ✦");
         System.out.println();
         
@@ -244,7 +244,7 @@ public class Main {
         int number = scanner.nextInt();
         
         System.out.println();
-        System.out.println("Hello, " + name + "! Welcome to PyFable Java Studio.");
+        System.out.println("Hello, " + name + "! Welcome to CoFable Java Studio.");
         System.out.println("Your favorite number doubled is: " + (number * 2));
     }
 }`,

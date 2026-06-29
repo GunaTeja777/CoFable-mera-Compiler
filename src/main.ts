@@ -173,7 +173,7 @@ builtins.input = custom_input
     updateRuntimeStatus();
     clearOutput();
     
-    appendOut('✦ PyFable ready — Fable 5 Edition', 'sys-line');
+    appendOut('✦ CoFable ready — Fable 5 Edition', 'sys-line');
     appendOut(`  Python ${ver} running in your browser via WebAssembly`, 'sys-line');
     appendOut('  Press Ctrl+Enter or click Run to execute code.', 'sys-line');
     appendOut('', 'sys-line');
@@ -815,7 +815,7 @@ function buildCodeAndOutputExport() {
   ));
 
   return [
-    'PyFable Code + Output Export',
+    'CoFable Code + Output Export',
     `Generated: ${new Date().toLocaleString()}`,
     '',
     '==================== CODE FILES ====================',
@@ -835,7 +835,7 @@ function downloadCodeAndOutput() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `pyfable_code_output_${formatDownloadTimestamp()}.txt`;
+  a.download = `cofable_code_output_${formatDownloadTimestamp()}.txt`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

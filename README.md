@@ -1,6 +1,6 @@
-# 🦋 PyFable Studio — Fable 5 Inspiration
+# 🦋 CoFable Studio — Fable 5 Inspiration
 
-PyFable is a premium, lightweight, responsive, and completely browser-based Python IDE. Built using the modern WebAssembly runtime (**Pyodide**), **CodeMirror 6**, **TypeScript**, and **Tailwind CSS v4**, it allows developers to run Python code with zero installations, local imports support via a Virtual File System, and interactive package installations from PyPI.
+CoFable is a premium, lightweight, responsive, and completely browser-based Python IDE. Built using the modern WebAssembly runtime (**Pyodide**), **CodeMirror 6**, **TypeScript**, and **Tailwind CSS v4**, it allows developers to run Python code with zero installations, local imports support via a Virtual File System, and interactive package installations from PyPI.
 
 ---
 
@@ -35,8 +35,8 @@ You only need [Node.js](https://nodejs.org/) installed on your machine.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/PyFable.git
-   cd PyFable
+   git clone https://github.com/your-username/CoFable.git
+   cd CoFable
    ```
 
 2. **Install dependencies**:
@@ -62,7 +62,7 @@ This will generate production-ready files in the `dist/` directory.
 
 ## 🌐 Deployment Options
 
-Because PyFable is a fully client-side static application, you can host it for free on:
+Because CoFable is a fully client-side static application, you can host it for free on:
 - **Vercel**
 - **Netlify**
 - **GitHub Pages**

@@ -16,7 +16,7 @@ export function buildAppLayout(container: HTMLElement) {
       <ellipse cx="45" cy="30" rx="3.5" ry="17" fill="#1C1409"/>
       <circle cx="45" cy="12" r="3.8" fill="#1C1409"/>
     </svg>
-    <h2 class="font-playfair text-[26px] text-ink font-bold">PyFable</h2>
+    <h2 class="font-playfair text-[26px] text-ink font-bold">CoFable</h2>
     <p class="text-xs text-ink-light">Summoning the Python WebAssembly runtime…</p>
     <div class="ldots">
       <span class="inline-block w-[9px] height-[9px] rounded-full mx-1 bg-teal animate-[ldot_1.4s_infinite_ease-in-out]"></span>
@@ -39,7 +39,7 @@ export function buildAppLayout(container: HTMLElement) {
         <ellipse cx="40" cy="28" rx="3" ry="15" fill="#E8DCBF"/>
         <circle cx="40" cy="12" r="3" fill="#E8DCBF"/>
       </svg>
-      <div class="hdr-logo font-playfair text-[22px] font-bold tracking-[0.3px] whitespace-nowrap">Py<em class="text-amber not-italic font-normal">Fable</em></div>
+      <div class="hdr-logo font-playfair text-[22px] font-bold tracking-[0.3px] whitespace-nowrap">Co<em class="text-amber not-italic font-normal">Fable</em></div>
       <div class="hdr-sub text-[11px] text-cream/40 italic whitespace-nowrap">— Python Studio · Fable 5 Edition</div>
     </div>
     <div class="hdr-bg-butterflies" aria-hidden="true">
@@ -255,7 +255,7 @@ export function buildAppLayout(container: HTMLElement) {
       Ln 1, Col 1
     </div>
     <div class="status-right opacity-60" id="status-right-label">
-      PyFable Studio v2.0
+      CoFable Studio v2.0
     </div>
   `;
   container.appendChild(statusbar);
