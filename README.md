@@ -1,13 +1,14 @@
 # 🦋 CoFable Studio — Fable 5 Inspiration
 
-CoFable is a premium, lightweight, responsive, and completely browser-based Python IDE. Built using the modern WebAssembly runtime (**Pyodide**), **CodeMirror 6**, **TypeScript**, and **Tailwind CSS v4**, it allows developers to run Python code with zero installations, local imports support via a Virtual File System, and interactive package installations from PyPI.
+CoFable is a premium, lightweight, responsive, and completely browser-based multi-language IDE supporting both Python and Java. Built using the modern WebAssembly runtime (**Pyodide**) for Python, a custom client-side transpiler for Java, **CodeMirror 6**, **TypeScript**, and **Tailwind CSS v4**, it allows developers to write and run code with zero installations, local imports support via a Virtual File System, and interactive package installations from PyPI.
 
 ---
 
 ## ✨ Features
 
 - 🐍 **WASM Python Runtime**: Full Python execution directly inside your browser powered by Pyodide (v0.25.0).
-- 📂 **Virtual File System (VFS)**: Write code across multiple files (`main.py`, `utils.py`), rename, delete, and import local modules seamlessly (changes are persisted in `localStorage`).
+- ☕ **Java (Transpiled) Runner**: Write and run Java code client-side via a high-performance custom transpiler and runner. Includes mocks for popular Java utilities (`Scanner`, `ArrayList`, `HashMap`, `HashSet`, `StringBuilder`).
+- 📂 **Virtual File System (VFS)**: Write code across multiple files (`main.py`, `Main.java`, `utils.py`), rename, delete, and import local modules seamlessly (changes are persisted in `localStorage`).
 - 📦 **PyPI Package Installer**: Install external packages (like `numpy`, `requests`, `sympy`) directly from PyPI via `micropip` runtime bootstrap.
 - 🎨 **Botanical Design Aesthetic**: A curated user interface supporting light/dark theme switching (Parchment vs. Charcoal), customized editor styling, and sleek typography (JetBrains Mono & Lato).
 - 🦋 **Visual Delight animations**: Elegant butterfly micro-animations triggering on successful/error execution states.
@@ -20,8 +21,8 @@ CoFable is a premium, lightweight, responsive, and completely browser-based Pyth
 
 - **Core Framework**: Vite + TypeScript
 - **Styling**: Tailwind CSS v4
-- **Code Editor**: CodeMirror 6 (with Python syntax parsing, autocomplete, active line highlighter, and responsive configurations)
-- **Engine**: Pyodide (WASM)
+- **Code Editor**: CodeMirror 6 (with Python and Java syntax parsing, autocomplete, active line highlighter, and responsive configurations)
+- **Engine**: Pyodide (WASM) for Python; Custom transpiler sandbox for Java.
 
 ---
 
